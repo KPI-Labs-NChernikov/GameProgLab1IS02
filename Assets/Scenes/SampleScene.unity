@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 141425167}
   - component: {fileID: 141425166}
   - component: {fileID: 141425168}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -386,7 +386,7 @@ GameObject:
   - component: {fileID: 195038912}
   - component: {fileID: 195038911}
   - component: {fileID: 195038913}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -663,6 +663,7 @@ GameObject:
   - component: {fileID: 366056267}
   - component: {fileID: 366056269}
   - component: {fileID: 366056270}
+  - component: {fileID: 366056271}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -734,8 +735,7 @@ Transform:
   m_LocalPosition: {x: -11.5, y: -4.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 519420032}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &366056269
@@ -800,6 +800,25 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &366056271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366056266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b591546106495ed46b6d7f33573ea1e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MovementSpeed: 2.5
+  JumpHeight: 2.25
+  DistanceForGroundCheck: 0.15
+  GroundLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  Radius: 0.5
 --- !u!1 &451586208
 GameObject:
   m_ObjectHideFlags: 0
@@ -814,7 +833,7 @@ GameObject:
   - component: {fileID: 451586212}
   - component: {fileID: 451586214}
   - component: {fileID: 451586213}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1805,7 +1824,7 @@ GameObject:
   - component: {fileID: 483104214}
   - component: {fileID: 483104213}
   - component: {fileID: 483104212}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Castle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3164,11 +3183,11 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -11.5, y: -4.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 366056268}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &522398337
 GameObject:
@@ -3216,7 +3235,7 @@ GameObject:
   - component: {fileID: 702405175}
   - component: {fileID: 702405174}
   - component: {fileID: 702405176}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3455,7 +3474,7 @@ GameObject:
   - component: {fileID: 821476068}
   - component: {fileID: 821476067}
   - component: {fileID: 821476069}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3746,7 +3765,7 @@ GameObject:
   - component: {fileID: 988325359}
   - component: {fileID: 988325358}
   - component: {fileID: 988325360}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3977,7 +3996,7 @@ GameObject:
   - component: {fileID: 1089345980}
   - component: {fileID: 1089345979}
   - component: {fileID: 1089345978}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5057,7 +5076,7 @@ GameObject:
   - component: {fileID: 1179867622}
   - component: {fileID: 1179867621}
   - component: {fileID: 1179867623}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5286,7 +5305,7 @@ GameObject:
   - component: {fileID: 1262366503}
   - component: {fileID: 1262366502}
   - component: {fileID: 1262366504}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5533,7 +5552,7 @@ GameObject:
   - component: {fileID: 1647343436}
   - component: {fileID: 1647343435}
   - component: {fileID: 1647343437}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5774,7 +5793,7 @@ GameObject:
   - component: {fileID: 1782145617}
   - component: {fileID: 1782145616}
   - component: {fileID: 1782145618}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6071,3 +6090,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 366056268}
   - {fileID: 1974669809}
+  - {fileID: 519420032}
