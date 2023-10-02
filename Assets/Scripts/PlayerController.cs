@@ -5,13 +5,12 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D _rigidbody;
+    private CircleCollider2D _circleCollider;
 
     [SerializeField] public float MovementSpeed = 2.5F;
     [SerializeField] public float JumpHeight = 2.25F;
-    [SerializeField] public float DistanceForGroundCheck = 0.15F;
+    [SerializeField] public float DistanceForGroundCheck = 0.05F;
     [SerializeField] public LayerMask GroundLayerMask;
-
-    [SerializeField] public float Radius = 0.5F;
 
     private float _moveX;
     private bool _isJumping;
@@ -21,6 +20,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+        _circleCollider = GetComponent<CircleCollider2D>();
         _jumpForce = Mathf.Sqrt(JumpHeight * -2 * (Physics2D.gravity.y * _rigidbody.gravityScale));
     }
 
@@ -47,6 +47,6 @@ public class PlayerController : MonoBehaviour
 
     private bool IsGrounded()
     {
-        return Physics2D.CircleCast(transform.position, Radius, Vector2.down, DistanceForGroundCheck, GroundLayerMask);
+        return Physics2D.CircleCast(transform.position, _circleCollider.radius * transform.localScale.x, Vector2.down, DistanceForGroundCheck, GroundLayerMask);
     }
 }
