@@ -38,9 +38,12 @@ public class PlayerController : MonoBehaviour
     {
         _rigidbody.velocity = new Vector2(_moveX * MovementSpeed, _rigidbody.velocity.y);
 
-        if (_isJumping && IsGrounded())
+        if (_isJumping)
         {
-            _rigidbody.AddForce(new Vector2(0, _jumpForce), ForceMode2D.Impulse);
+            if (IsGrounded())
+            {
+                _rigidbody.AddForce(new Vector2(0, _jumpForce), ForceMode2D.Impulse);
+            }
             _isJumping = false;
         }
     }
